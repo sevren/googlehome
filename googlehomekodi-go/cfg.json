@@ -1,0 +1,13 @@
+{
+    "kodi" : {
+        "id": "kodi",
+        "protocol": "http",
+        "ip": "192.168.1.111",
+        "port": 8080,
+        "user": "kodi-user",
+        "pass": "kodi-pass"
+    },
+    "authtoken" : "Whatever-you-want",
+    "listenerport" : 9998,
+    "youtubeapikey" : "XXXXXXXXXXXXXXXX"
+}
