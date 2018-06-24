@@ -17,9 +17,14 @@ DNS_HOST_VAR=$1
 EMAIL=$2
 
 cd googlehomekodi
+echo "Cloning out the Master branch for GoogleHomeKodi Node project"
+git clone https://github.com/OmerTu/GoogleHomeKodi.git
+echo "Replacing the Dockerfile with our own"
+cp Dockerfile ./GoogleHomeKodi/Dockerfile
 echo "Building and tagging the GoogleHomeKodi docker image"
+cd GoogleHomeKodi
 docker build -t sinedied/googlehomekodi .
-cd ..
+cd ../../
 cd nginx-certbot-proxy
 echo "Creating the diffe-helman key.. this will take a while go grab a coffee"
 openssl dhparam -out ./dhparams.pem 2048
